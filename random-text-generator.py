@@ -8,24 +8,24 @@ str_cnt = int(input('How many strings should I generate? '))
 str_len = int(input('How long should the string(s) be? '))
 str_entries = []
 
-for ent in range(str_len):
-    str_entries.append(input("Char %d. Enter 'c' for consonant, 'v' for vowel and 'l' for letter:  " % (ent + 1)))
+for a in range(str_len):
+    str_entries.append(input(str(a + 1) + ". Enter 'c' for consonant, 'v' for vowel and 'l' for any:  "))
 
 
 def generate_string():
-    generated = []
+    generated = ''
 
     for entry in str_entries:
         if entry == 'l':
-            generated.append(random.choice(letters))
+            generated += random.choice(letters)
         elif entry == 'c':
-            generated.append(random.choice(consonants))
+            generated += random.choice(consonants)
         elif entry == 'v':
-            generated.append(random.choice(vowels))
+            generated += random.choice(vowels)
         else:
-            generated.append(entry)
+            generated += entry
 
-    return ''.join(generated)
+    return generated
 
-for i in range(str_cnt):
-    print('Result %d: %s' % (i + 1, generate_string()))
+for b in range(str_cnt):
+    print(generate_string())
