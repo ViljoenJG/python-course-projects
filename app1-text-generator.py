@@ -1,5 +1,9 @@
 import random
 
+"""
+Instructors example.
+"""
+
 vowels = 'aeiouy'
 consonants = 'bcdfghjklmnpqrstvwxz'
 letters = vowels + consonants
